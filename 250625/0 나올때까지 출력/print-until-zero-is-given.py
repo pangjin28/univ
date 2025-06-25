@@ -1,6 +1,5 @@
 while True:
     a= int(input())
-    if a>0:
-        print(a)
-    elif a==0:
+    if a==0:
         break
+    print(a)
