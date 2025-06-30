@@ -1,3 +1,2 @@
 a = float(input())
-b = round(a,2)
-print(f"{b:.2f}")
+print(f"{a:.2f}")
