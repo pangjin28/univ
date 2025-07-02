@@ -10,4 +10,4 @@ for i in range(a,101):
         print("D", end=" ")
     else:
         print("F")
-        
+    i+=1
