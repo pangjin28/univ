@@ -1,0 +1,5 @@
+a = int(input())
+for _ in range(a):
+    b= int(input())
+    if b % 3 == 0 :
+        print(b)
