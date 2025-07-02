@@ -9,5 +9,5 @@ for i in range(a,101):
     elif i >=60:
         print("D", end=" ")
     else:
-        print("F")
+        print("F",end=" ")
     i+=1
