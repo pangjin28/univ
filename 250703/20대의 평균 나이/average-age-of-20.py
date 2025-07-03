@@ -1,10 +1,12 @@
-cnt=0
-sum =0
-while True:
+cnt = 0
+sum_age = 0
 
-    a=int(input())
-    if a >=30:
+while True:
+    age = int(input())
+    if age < 20 or age > 29:
         break
-    sum += a
+    sum_age += age
     cnt += 1
-print(f"{sum/cnt:.2f}")
+
+average = sum_age / cnt
+print(f"{average:.2f}")
