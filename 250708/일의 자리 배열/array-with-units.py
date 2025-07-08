@@ -1,8 +1,7 @@
 a, b = map(int, input().split())
 c = [a, b]
 
-while len(c) < 10:
-    next_val = (c[-1] + c[-2]) % 10  
-    c.append(next_val)
-
+for i in range(2, 10):
+    c.append((c[i-1] + c[i-2]) % 10)
 print(*c)
+
