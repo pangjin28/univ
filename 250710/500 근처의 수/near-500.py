@@ -1,15 +1,17 @@
 
-numbers = list(map(int, input().split()))
+arr = list(map(int, input().split()))
 
-# 초기값 설정
-max_below_500 = -1  
-min_above_500 = 1001  
 
-for num in numbers:
-    if num < 500:
-        max_below_500 = max(max_below_500, num)
-    elif num > 500:
-        min_above_500 = min(min_above_500, num)
+max_val = 1
+min_val = 1000
+	
 
-# 결과 출력
-print(max_below_500, min_above_500)
+for elem in arr:
+	if elem < 500 and elem > max_val:
+		max_val = elem
+		
+	if elem > 500 and elem < min_val:
+		min_val = elem
+	
+# 구한 값을 출력합니다.
+print(max_val, min_val)
