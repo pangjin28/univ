@@ -6,6 +6,6 @@ for i in a:
         break
     if i < mi:
         mi = i
-    if i > mi:
+    if i > ma:
         ma = i
 print(ma,mi)
