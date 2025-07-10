@@ -2,7 +2,7 @@ n = int(input())
 a = list(map(int, input().split()))
 
 # Please write your code here.
-mi = float('inf')
+mi = a[0]
 cnt=0
 for i in a:
     if i < mi:
