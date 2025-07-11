@@ -1,9 +1,4 @@
-a=input()
-b=input()
-c=input()
-d=input()
+string = [input() for _ in range(4)]
 
-print(d)
-print(c)
-print(b)
-print(a)
+for i in range(3, -1, -1):
+	print(string[i])
