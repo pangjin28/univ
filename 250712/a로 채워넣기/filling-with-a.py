@@ -1,6 +1,6 @@
 a=input()
-b=list(a)
-b[1] = "a"
-b[-2] = "a"
+a=list(a)
+a[1] = "a"
+a[-2] = "a"
 
-print("".join(b))
+print("".join(a))
