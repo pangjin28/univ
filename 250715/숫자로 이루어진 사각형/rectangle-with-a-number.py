@@ -15,4 +15,4 @@ def saa(a):
         for j in range(a):
             print(ds[i][j],end=" ")
         print()
-saa(4)
+saa(n)
