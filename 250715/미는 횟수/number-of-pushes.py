@@ -1,7 +1,7 @@
-A = input()  
-B = input()  
+A = input()
+B = input()
 
-for i in range(1, len(A) + 1):
+for i in range(len(A)):  
     if A[i:] + A[:i] == B:
         print(i)
         break
