@@ -1,0 +1,26 @@
+# 클래스 선언
+class Number:
+    def __init__(self, number, index):
+        self.number = number  # 수의 값
+        self.index = index  # 원래의 인덱스
+
+# 변수 선언 및 입력
+n = int(input())
+arr = list(map(int, input().split()))
+numbers = []
+
+# 수의 값과 원래 인덱스를 수동으로 저장
+for i in range(n):
+    numbers.append(Number(arr[i], i + 1))  # 원래 인덱스는 1부터 시작하므로 i + 1
+
+# Custom Comparator를 활용한 정렬
+numbers.sort(key=lambda x: (x.number, x.index))  # 값 기준 정렬, 값이 같으면 인덱스 기준 정렬
+
+# 정렬된 숫자들의 원래 인덱스를 활용한 정답 배열 저장
+answer = [0] * n  # 정답 배열 초기화
+for i, number in enumerate(numbers):
+    answer[number.index - 1] = i + 1  # 원래 인덱스 보정, 1-based index 사용
+
+# 출력
+for i in range(n):
+    print(answer[i], end=' ')
