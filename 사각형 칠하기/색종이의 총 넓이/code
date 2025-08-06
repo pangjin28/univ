@@ -1,0 +1,19 @@
+n = int(input())
+
+grid = [[0] * 201 for _ in range(201)]
+
+for _ in range(n):
+    x, y = map(int, input().split())
+    x += 100
+    y += 100
+    for i in range(x, x + 8):
+        for j in range(y, y + 8):
+            grid[i][j] = 1
+
+total = 0
+for i in range(201):
+    for j in range(201):
+        if grid[i][j] == 1:
+            total += 1
+
+print(total)
