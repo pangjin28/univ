@@ -1,0 +1,16 @@
+n = int(input())
+arr = [int(input()) for _ in range(n)]
+
+# Please write your code here.
+max_len=1
+len2 = 1
+
+for i in range(1,n):
+    if arr[i-1] < arr[i]:
+        len2 +=1
+    else:
+        max_len = max(max_len, len2)
+        len2 =1
+    
+max_len = max(max_len,len2)
+print(max_len)
