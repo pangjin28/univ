@@ -1,0 +1,30 @@
+n = int(input())
+name = []
+korean = []
+english = []
+math = []
+
+for _ in range(n):
+    student_info = input().split()
+    name.append(student_info[0])
+    korean.append(int(student_info[1]))
+    english.append(int(student_info[2]))
+    math.append(int(student_info[3]))
+
+# Please write your code here.
+class sa:
+    def __init__(self, name, korean, english, math):
+        self.n = name
+        self.k = korean
+        self.e = english
+        self.m = math
+
+people=[]
+for i in range(n):
+    person = sa(name[i],korean[i],english[i],math[i])
+    people.append(person)
+
+people.sort(key= lambda person :(-person.k, -person.e,-person.m))
+
+for i in people:
+    print(i.n, i.k, i.e, i.m)
