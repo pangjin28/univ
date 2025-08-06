@@ -1,0 +1,16 @@
+N, B = map(int, input().split())
+
+# Please write your code here.
+def sa1(a,b):
+    c =[]
+    while True:
+        if a < b:
+            c.append(a)
+            break
+        c.append(a % b)
+        a //= b
+    return c
+
+d = sa1(N,B)
+for i in d[::-1]:
+    print(i, end="")
