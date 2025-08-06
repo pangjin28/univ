@@ -1,0 +1,10 @@
+binary = input()
+
+# Please write your code here.
+leng = len(binary)
+num = 0
+
+for i in range(leng):
+    num += int(binary[i]) * (2 ** (leng - i- 1))
+
+print(num)
