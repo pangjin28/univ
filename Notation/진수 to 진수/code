@@ -1,0 +1,19 @@
+a, b = map(int, input().split())
+n = input()
+
+# Please write your code here.
+num =0
+leng = len(n)
+for i in range(leng):
+    num += int(n[i]) * (a ** (leng - i -1))
+c=[]
+
+while True:
+    if num < b:
+        c.append(num)
+        break
+    c.append(num % b)
+    num //= b
+
+for i in c[::-1]:
+    print(i, end="")
