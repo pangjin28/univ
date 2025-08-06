@@ -1,0 +1,13 @@
+secret_code, meeting_point, time = input().split()
+time = int(time)
+
+# Please write your code here.
+class saa:
+    def __init__(self, secret_code, meeting_point, time):
+        self.s= secret_code
+        self.m= meeting_point
+        self.t= time
+per = saa(secret_code,meeting_point,time)
+print("secret code :", per.s)
+print("meeting point :", per.m)
+print("time :",per.t)
