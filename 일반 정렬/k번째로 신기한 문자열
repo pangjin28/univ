@@ -1,0 +1,11 @@
+n, k, t = input().split()
+n, k = int(n), int(k)
+stra = [input() for _ in range(n)]
+
+# Please write your code here.
+words = [word for word in stra if word.startswith(t)]
+
+words.sort()
+
+print(words[k-1])
+
