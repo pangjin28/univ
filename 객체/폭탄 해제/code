@@ -1,0 +1,14 @@
+unlock_code, wire_color, seconds = input().split()
+seconds = int(seconds)
+
+# Please write your code here.
+class sa:
+    def __init__(self, unlock_code, wire_color, seconds):
+        self.cod = unlock_code
+        self.col = wire_color
+        self.sec = seconds
+
+ex = sa(unlock_code,wire_color,seconds)
+print("code :", ex.cod)
+print("color :", ex.col)
+print("second :", ex.sec)
