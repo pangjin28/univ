@@ -1,0 +1,18 @@
+n = int(input())
+
+class sa:
+    def __init__(self, height, weight, index):
+        self.height = height
+        self.weight = weight
+        self.index = index  
+
+students = []
+for i in range(1,n+1):
+    height, weight = map(int, input().split())
+    person = sa(height, weight, i) 
+    students.append(person)
+
+students.sort(key=lambda x: (-x.height, -x.weight, x.index))
+
+for student in students:
+    print(student.height, student.weight, student.index)
