@@ -1,0 +1,27 @@
+n = int(input())
+date = []
+day = []
+weather = []
+
+for _ in range(n):
+    d, dy, w = input().split()
+    date.append(d)
+    day.append(dy)
+    weather.append(w)
+
+# Please write your code here.
+class sa:
+    def __init__(self, d, dy, w):
+        self.d = d
+        self.dy =dy
+        self.w = w
+
+da = []
+for i in range(n):
+    dd = sa(date[i], day[i], weather[i])
+    da.append(dd)
+
+rain_days = [d for d in da if d.w == "Rain"]
+rain_days.sort(key=lambda da : da.d)
+
+print(rain_days[0].d,rain_days[0].dy,rain_days[0].w)
