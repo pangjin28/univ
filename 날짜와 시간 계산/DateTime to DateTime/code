@@ -1,0 +1,12 @@
+a, b, c = map(int, input().split())
+
+# Please write your code here.
+start_time = 11* 24 *60 + 11 * 60 + 11  
+given_time = a * 24 * 60 + b * 60 + c
+
+time_difference = given_time - start_time
+
+if time_difference < 0:
+    print(-1)
+else:
+    print(int(time_difference))
