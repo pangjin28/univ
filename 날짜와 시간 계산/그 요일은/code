@@ -1,0 +1,21 @@
+monthday = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+
+m1, d1, m2, d2 = map(int, input().split())
+A = input()
+
+target_day = weekdays.index(A)
+base_day = 1
+count = 0
+
+for month in range(m1, m2 + 1):
+    start_day = d1 if month == m1 else 1
+    end_day = d2 if month == m2 else monthday[month]
+    
+    for day in range(start_day, end_day + 1):
+        if base_day == target_day:
+            count += 1
+        base_day = (base_day + 1) % 7  
+
+# 결과 출력
+print(count)
