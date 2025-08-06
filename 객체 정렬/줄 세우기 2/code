@@ -1,0 +1,23 @@
+n = int(input())
+students = []
+hei=[]
+wei=[]
+for i in range(n):
+    height, weight = map(int,input().split())
+    hei.append(height)
+    wei.append(weight)
+
+class sa:
+    def __init__(self,height,weight,index):
+        self.h=height
+        self.w=weight
+        self.i =index
+    
+for i in range(n):
+    student = sa(hei[i],wei[i],i+1)
+    students.append(student)
+
+students.sort(key=lambda x: (x.h, -x.w))
+# Please write your code here.
+for i in students:
+    print(i.h, i.w, i.i)
