@@ -1,14 +1,13 @@
-user2_id, user2_level = input().split()
-user2_level = int(user2_level)
+secret_code, meeting_point, time = input().split()
+time = int(time)
 
 # Please write your code here.
-class ds:
-    def __init__(self, user2_id="codetree", user2_level=10):
-        self.id=user2_id
-        self.le=user2_level
-
-pe1 = ds()
-pe2 = ds(user2_id,user2_level)
-
-print("user", pe1.id, "lv", pe1.le)
-print("user", pe2.id, "lv", pe2.le)
+class saa:
+    def __init__(self, secret_code, meeting_point, time):
+        self.s= secret_code
+        self.m= meeting_point
+        self.t= time
+per = saa(secret_code,meeting_point,time)
+print("secret code :", per.s)
+print("meeting point :", per.m)
+print("time :",per.t)
