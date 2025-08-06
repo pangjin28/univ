@@ -1,0 +1,15 @@
+product_name, product_code = input().split()
+product_code = int(product_code)
+
+# Please write your code here.
+class sa:
+    def __init__(self, product_name,product_code):
+        self.na = product_name
+        self.co = product_code
+    
+pd1= sa("codetree", 50)
+pd2 = sa(product_name,product_code)
+
+
+print("product", pd1.co, "is", pd1.na)
+print("product", pd2.co, "is", pd2.na)
