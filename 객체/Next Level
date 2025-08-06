@@ -1,0 +1,14 @@
+user2_id, user2_level = input().split()
+user2_level = int(user2_level)
+
+# Please write your code here.
+class ds:
+    def __init__(self, user2_id="codetree", user2_level=10):
+        self.id=user2_id
+        self.le=user2_level
+
+pe1 = ds()
+pe2 = ds(user2_id,user2_level)
+
+print("user", pe1.id, "lv", pe1.le)
+print("user", pe2.id, "lv", pe2.le)
