@@ -1,14 +1,26 @@
-n = int(input()) 
+n = int(input())
 points = [tuple(map(int, input().split())) for _ in range(n)]
-
-def area(p1, p2, p3):
-    return abs(p1[0]*(p2[1] - p3[1]) + p2[0]*(p3[1] - p1[1]) + p3[0]*(p1[1] - p2[1])) / 2
 
 max_area = 0
 
 for i in range(n):
-    for j in range(i + 1, n):
-        for k in range(j + 1, n):
-                max_area = max(max_area, area(points[i], points[j], points[k]))
+    for j in range(n):
+        for k in range(n):
+            if i == j or j == k or i == k:
+                continue
+            x1, y1 = points[i]
+            x2, y2 = points[j]
+            x3, y3 = points[k]
+            
+            if y1 == y2 and x1 == x3 and y1 != y3 and x2 != x3:
+                base = abs(x1 - x2)
+                height = abs(y1 - y3)
+                area = base * height / 2
+                max_area = max(max_area, area)
+            elif x1 == x2 and y1 == y3 and y2 != y3 and x1 != x3:
+                base = abs(y1 - y2)
+                height = abs(x1 - x3)
+                area = base * height / 2
+                max_area = max(max_area, area)
 
-print(2 * int(max_area)) 
+print(int(2 * max_area))
