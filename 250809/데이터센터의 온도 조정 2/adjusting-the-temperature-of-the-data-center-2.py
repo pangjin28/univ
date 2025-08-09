@@ -2,8 +2,13 @@ N, C, G, H = map(int, input().split())
 ranges = [tuple(map(int, input().split())) for _ in range(N)]
 
 # Please write your code here.
-maxd =0
-for temp in range(-100, 101):
+min_temp = min(ta for ta, tb in ranges)
+max_temp = max(tb for ta, tb in ranges)
+
+maxd = 0
+
+for temp in range(min_temp, max_temp + 1):
+
     total = 0
     for ta, tb in ranges:
         if temp < ta:
