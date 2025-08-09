@@ -1,10 +1,14 @@
-X, Y = map(int, input().split())
+X, Y = map(int, input().split())  
+total = 0  
 
-# Please write your code here.
+for i in range(X, Y + 1): 
+    s = str(i)  
+    count = [0] * 10  
 
-total = 0
-for i in range(X, Y + 1):
-    s = str(i)
-    if len(set(s)) == 2:
-        total+=1
-print(total)
+    for ch in s:
+        count[int(ch)] += 1
+
+    if count.count(1) == 1 and count.count(0) == 8:
+        total += 1  
+
+print(total)  
