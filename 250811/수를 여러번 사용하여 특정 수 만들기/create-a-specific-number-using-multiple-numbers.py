@@ -2,8 +2,8 @@ A, B, C = map(int, input().split())
 
 # Please write your code here.
 maxd =0
-for i in range(100):
-    for j in range(100):
+for i in range(1000):
+    for j in range(1000):
         s = A * i + B * j
         if s > C:
             break
