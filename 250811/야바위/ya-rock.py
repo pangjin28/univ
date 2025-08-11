@@ -2,22 +2,18 @@ n = int(input())
 moves = [tuple(map(int, input().split())) for _ in range(n)]
 
 # Please write your code here.
-best_pos = 0
 max_score = 0
 
-for start in range(1, 4):
-    pos = start
+for i in range(1, 4):
     score = 0
     for a, b, c in moves:
-        if pos == a:
-            pos = b
-        elif pos == b:
-            pos = a
+        if i == a:
+            i = b
+        elif i == b:
+            i = a
 
-        if pos == c:
+        if i == c:
             score += 1
-    if score >= max_score:
-        max_score = score
-        best_pos = start
+    max_score = max(max_score, score)
 
-print(best_pos)
+print(max_score)
