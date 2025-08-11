@@ -16,7 +16,7 @@ for start in range(1, 4):
 
         if pos == c:
             score += 1
-    if score > max_score:
+    if score >= max_score:
         max_score = score
         best_pos = start
 
